@@ -1,0 +1,16 @@
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\MacroTracker.Models.dll
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\MacroTracker.Models.pdb
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\obj\Debug\MacroTracker.Models.csproj.AssemblyReference.cache
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\obj\Debug\MacroTracker.Models.csproj.CoreCompileInputs.cache
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\obj\Debug\MacroTracker.Models.dll
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\obj\Debug\MacroTracker.Models.pdb
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\MacroTracker.Models.dll.config
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\EntityFramework.dll
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\EntityFramework.xml
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Models\obj\Debug\MacroTracker.Models.csproj.CopyComplete
