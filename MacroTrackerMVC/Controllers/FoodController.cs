@@ -56,6 +56,48 @@ namespace MacroTrackerMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateFoodService();
+            var detail = service.GetFoodById(id);
+            var model =
+                new FoodEdit
+                {
+                    FoodId = detail.FoodId,
+                    FoodName = detail.FoodName,
+                    Content = detail.Content,
+                    Calories = detail.Calories,
+                    Proteins = detail.Proteins,
+                    Fats = detail.Fats,
+                    Carbs = detail.Carbs
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, FoodEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.FoodId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateFoodService();
+
+            if (service.UpdateFood(model))
+            {
+                TempData["SaveResult"] = "Your food was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your food could not be updated.");
+            return View(model);
+        }
+
         private FoodService CreateFoodService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

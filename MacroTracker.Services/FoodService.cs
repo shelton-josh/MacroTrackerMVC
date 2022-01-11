@@ -79,5 +79,25 @@ namespace MacroTracker.Services
                     };
             }
         }
+
+        public bool UpdateFood(FoodEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Foods
+                        .Single(e => e.FoodId == model.FoodId && e.OwnerId == _userId);
+
+                entity.FoodName = model.FoodName;
+                entity.Content = model.Content;
+                entity.Calories = model.Calories;
+                entity.Proteins = model.Proteins;
+                entity.Fats = model.Fats;
+                entity.Carbs = model.Carbs;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
