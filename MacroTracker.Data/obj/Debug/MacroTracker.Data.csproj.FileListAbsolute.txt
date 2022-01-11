@@ -1,5 +1,3 @@
-C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.csproj.AssemblyReference.cache
-C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.csproj.CoreCompileInputs.cache
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\bin\Debug\MacroTracker.Data.dll.config
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\bin\Debug\MacroTracker.Data.dll
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\bin\Debug\MacroTracker.Data.pdb
@@ -11,6 +9,10 @@ C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrack
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.csproj.AssemblyReference.cache
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.Migrations.InitialCreate.resources
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.csproj.GenerateResource.cache
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.csproj.CoreCompileInputs.cache
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.csproj.CopyComplete
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.dll
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.pdb
