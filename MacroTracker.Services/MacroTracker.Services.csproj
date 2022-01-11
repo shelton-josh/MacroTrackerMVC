@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MacroTracker.Data\MacroTracker.Data.csproj">
+      <Project>{2afbc642-b2c2-47ee-94f0-f3a5b6be2721}</Project>
+      <Name>MacroTracker.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MacroTracker.Models\MacroTracker.Models.csproj">
+      <Project>{059479e1-f244-4a65-907b-c961de52d346}</Project>
+      <Name>MacroTracker.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

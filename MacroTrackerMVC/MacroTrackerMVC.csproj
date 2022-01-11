@@ -237,6 +237,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Food\Index.cshtml" />
     <Content Include="Views\Food\Create.cshtml" />
+    <Content Include="Views\Food\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -262,6 +263,10 @@
     <ProjectReference Include="..\MacroTracker.Models\MacroTracker.Models.csproj">
       <Project>{059479E1-F244-4A65-907B-C961DE52D346}</Project>
       <Name>MacroTracker.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MacroTracker.Services\MacroTracker.Services.csproj">
+      <Project>{AD3F0AE7-B38B-4D58-8800-DDBBEE66AEE1}</Project>
+      <Name>MacroTracker.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

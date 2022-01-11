@@ -60,6 +60,10 @@
     <Compile Include="Migrations\202201102034421_InitialCreate.Designer.cs">
       <DependentUpon>202201102034421_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201111534322_FoodGuid.cs" />
+    <Compile Include="Migrations\202201111534322_FoodGuid.Designer.cs">
+      <DependentUpon>202201111534322_FoodGuid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202201102034421_InitialCreate.resx">
       <DependentUpon>202201102034421_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201111534322_FoodGuid.resx">
+      <DependentUpon>202201111534322_FoodGuid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

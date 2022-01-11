@@ -9,6 +9,17 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@if(TempData.ContainsKey("SaveResult")) 
+{ 
+    <div class="alert alert-success fade in" role="alert">
+       
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
 <table class="table">
     <tr>
         <th>
@@ -16,19 +27,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FoodName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Calories)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Proteins)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fats)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Carbs)
-        </th>
+        </th>       
         <th></th>
     </tr>
 
@@ -40,22 +39,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.FoodName)
         </td>
+        
         <td>
-            @Html.DisplayFor(modelItem => item.Calories)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Proteins)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fats)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Carbs)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new {  id=item.FoodId  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.FoodId  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.FoodId  })
         </td>
     </tr>
 }
