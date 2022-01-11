@@ -33,6 +33,8 @@ namespace MacroTracker.Data
         }
 
         public DbSet<Food> Foods { get; set; }
+        public DbSet<Intake> Intakes { get; set; }
+        //public DbSet<Meal> Meals { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

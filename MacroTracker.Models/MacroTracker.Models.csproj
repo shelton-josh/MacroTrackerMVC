@@ -58,11 +58,21 @@
     <Compile Include="FoodDetail.cs" />
     <Compile Include="FoodEdit.cs" />
     <Compile Include="FoodListItem.cs" />
+    <Compile Include="IntakeCreate.cs" />
+    <Compile Include="IntakeDetail.cs" />
+    <Compile Include="IntakeEdit.cs" />
+    <Compile Include="IntakeListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MacroTracker.Data\MacroTracker.Data.csproj">
+      <Project>{2AFBC642-B2C2-47EE-94F0-F3A5B6BE2721}</Project>
+      <Name>MacroTracker.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
