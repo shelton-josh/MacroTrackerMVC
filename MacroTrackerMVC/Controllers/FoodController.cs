@@ -98,6 +98,29 @@ namespace MacroTrackerMVC.Controllers
             return View(model);
         }
 
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateFoodService();
+            var model = svc.GetFoodById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateFoodService();
+
+            service.DeleteFood(id);
+
+            TempData["SaveResult"] = "Your food was deleted.";
+
+            return RedirectToAction("Index");
+        }
+
         private FoodService CreateFoodService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
