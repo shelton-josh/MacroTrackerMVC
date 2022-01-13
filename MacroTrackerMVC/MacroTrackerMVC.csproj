@@ -242,10 +242,10 @@
     <Content Include="Views\Food\Edit.cshtml" />
     <Content Include="Views\Food\Delete.cshtml" />
     <Content Include="Views\Intake\Index.cshtml" />
-    <Content Include="Views\Intake\Create.cshtml" />
     <Content Include="Views\Intake\Details.cshtml" />
     <Content Include="Views\Intake\Edit.cshtml" />
     <Content Include="Views\Intake\Delete.cshtml" />
+    <Content Include="Views\Intake\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

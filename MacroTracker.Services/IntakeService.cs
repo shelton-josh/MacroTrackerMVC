@@ -24,7 +24,7 @@ namespace MacroTracker.Services
                 {
                     OwnerId = _userId,
                     IntakeName = model.IntakeName,
-                    Food = model.Food,
+                    FoodId = model.FoodId,
                     FoodQty = model.FoodQty
                 };
 
@@ -68,7 +68,7 @@ namespace MacroTracker.Services
                     {
                         IntakeId = entity.IntakeId,
                         IntakeName = entity.IntakeName,
-                        Food = entity.Food,
+                        FoodDetail = entity.FoodDetail,
                         FoodQty = entity.FoodQty
                     };
             }
@@ -84,7 +84,7 @@ namespace MacroTracker.Services
                         .Single(e => e.IntakeId == model.IntakeId && e.OwnerId == _userId);
 
                 entity.IntakeName = model.IntakeName;
-                entity.Food = model.Food;
+                entity.FoodDetail = model.FoodDetail;
                 entity.FoodQty = model.FoodQty;
                
                 return ctx.SaveChanges() == 1;

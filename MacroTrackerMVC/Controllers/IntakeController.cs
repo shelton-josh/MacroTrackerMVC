@@ -1,4 +1,5 @@
-﻿using MacroTracker.Models;
+﻿using MacroTracker.Data;
+using MacroTracker.Models;
 using MacroTracker.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -12,6 +13,7 @@ namespace MacroTrackerMVC.Controllers
     [Authorize]
     public class IntakeController : Controller
     {
+        
         // GET: Food
         public ActionResult Index()
         {
@@ -65,7 +67,7 @@ namespace MacroTrackerMVC.Controllers
                 {
                     IntakeId = detail.IntakeId,
                     IntakeName = detail.IntakeName,
-                    Food = detail.Food,
+                    FoodDetail = detail.FoodDetail,
                     FoodQty = detail.FoodQty,
                 };
             return View(model);
@@ -87,11 +89,11 @@ namespace MacroTrackerMVC.Controllers
 
             if (service.UpdateIntake(model))
             {
-                TempData["SaveResult"] = "Your intake was updated.";
+                TempData["SaveResult"] = "Your Meal was updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your intake could not be updated.");
+            ModelState.AddModelError("", "Your Meal could not be updated.");
             return View(model);
         }
 
@@ -113,7 +115,7 @@ namespace MacroTrackerMVC.Controllers
 
             service.DeleteIntake(id);
 
-            TempData["SaveResult"] = "Your intake was deleted.";
+            TempData["SaveResult"] = "Your Meal was deleted.";
 
             return RedirectToAction("Index");
         }

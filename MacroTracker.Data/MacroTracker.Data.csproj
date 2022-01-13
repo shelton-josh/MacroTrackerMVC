@@ -69,6 +69,10 @@
     <Compile Include="Migrations\202201112302246_Intake.Designer.cs">
       <DependentUpon>202201112302246_Intake.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201131807439_IntakeFoodDetail.cs" />
+    <Compile Include="Migrations\202201131807439_IntakeFoodDetail.Designer.cs">
+      <DependentUpon>202201131807439_IntakeFoodDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201112302246_Intake.resx">
       <DependentUpon>202201112302246_Intake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201131807439_IntakeFoodDetail.resx">
+      <DependentUpon>202201131807439_IntakeFoodDetail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

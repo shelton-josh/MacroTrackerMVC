@@ -14,11 +14,10 @@ namespace MacroTracker.Models
 
         public string IntakeName { get; set; }
 
-        [Required]
         public virtual Food Food { get; set; }
 
-        [Required]
         public decimal FoodQty { get; set; }
 
+        public string FoodDetail { get; set; }
     }
 }

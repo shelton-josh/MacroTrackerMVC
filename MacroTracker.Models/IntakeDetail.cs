@@ -16,7 +16,7 @@ namespace MacroTracker.Models
         [Display(Name = "Intake Name")]
         public string IntakeName { get; set; }
 
-        public virtual Food Food { get; set; }
+        public string FoodDetail { get; set; }
       
         public decimal FoodQty { get; set; }
     }

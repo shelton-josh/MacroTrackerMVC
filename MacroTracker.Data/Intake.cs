@@ -16,7 +16,6 @@ namespace MacroTracker.Data
         [Required]
         public Guid OwnerId { get; set; }
 
-        [ForeignKey(nameof(Food))]
         public int FoodId { get; set; }
 
         //[ForeignKey(nameof(Meal))]
@@ -28,7 +27,11 @@ namespace MacroTracker.Data
         [Required]
         public decimal FoodQty { get; set; }
 
+        [ForeignKey(nameof(FoodId))]
         public virtual Food Food { get; set; }
+
+        public string FoodDetail { get; set; }
+
 
         //public virtual Meal Meal{ get; set; }
 
