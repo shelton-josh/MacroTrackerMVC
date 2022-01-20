@@ -14,7 +14,7 @@ namespace MacroTrackerMVC.Controllers
     public class IntakeController : Controller
     {
 
-        public IEnumerable<SelectListItem> GetFoods()
+        /*public IEnumerable<SelectListItem> GetFoods()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var Service = new FoodService(userId);
@@ -29,13 +29,12 @@ namespace MacroTrackerMVC.Controllers
                                             }
                                         ).ToList();
             return SelectList;
-        }
+        }*/
         
         // GET: Food
         public ActionResult Index()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new IntakeService(userId);
+            var service = CreateIntakeService();
             var model = service.GetIntakes();
 
             return View(model);
@@ -85,8 +84,8 @@ namespace MacroTrackerMVC.Controllers
                 new IntakeEdit
                 {
                     IntakeId = detail.IntakeId,
-                    IntakeName = detail.IntakeName,
-                    FoodDetail = detail.FoodDetail,
+                    MealId = detail.MealId,
+                    FoodId = detail.Food.FoodId,
                     FoodQty = detail.FoodQty,
                 };
             return View(model);

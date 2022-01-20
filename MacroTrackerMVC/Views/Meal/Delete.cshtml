@@ -1,0 +1,64 @@
+﻿@model MacroTracker.Models.MealDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MealDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MealId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MealId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MealName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MealName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MealContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MealContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntakeDetail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntakeDetail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntakeQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntakeQty)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

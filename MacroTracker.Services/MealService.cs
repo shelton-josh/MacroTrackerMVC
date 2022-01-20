@@ -8,45 +8,54 @@ using System.Threading.Tasks;
 
 namespace MacroTracker.Services
 {
-    public class IntakeService
+    public class MealService
     {
         private readonly Guid _userId;
 
-        public IntakeService(Guid userId)
+        public MealService(Guid userId)
         {
             _userId = userId;
         }
 
-        public IntakeCreate CreateGet()
+        public MealCreate CreateGet()
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var starterModel = new IntakeCreate()
+                var starterModel = new MealCreate()
                 {
-                    
+                    Food = ctx.Foods.OrderBy(x => x.FoodName).Select(e => new FoodComponent
+                    {
+                        FoodId = e.FoodId,
+                        FoodName = e.FoodName,
+                        Calories = e.Calories,
+                        Proteins = e.Proteins,
+                        Fats = e.Fats,
+                        Carbs = e.Carbs,
+                        Quantity = 0,
+                    }).ToList(),
                 };
             return starterModel;
             }
         }
 
-        public bool CreateIntake(IntakeCreate model)
+        public bool CreateMeal(MealCreate model)
         {
             var entity =
-                new Intake()
+                new Meal()
                 {
+                    MealName = model.MealName,
+                    MealContent = model.MealContent,
+                    DateTime = model.DateTime,
                     OwnerId = _userId,
-                    MealId = model.MealId,
-                    FoodQty = model.FoodQty,
-                    FoodId = model.FoodId,
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                //int savedItems = 0;
-                ctx.Intakes.Add(entity);
+                int savedItems = 0;
+                ctx.Meals.Add(entity);
                 return ctx.SaveChanges() == 1;
-                //if (ctx.SaveChanges() == 1)
-                /*{
+                if (ctx.SaveChanges() == 1)
+                {
                     foreach (var item in model.Food)
                     {
                         if (item.Quantity != 0)
@@ -61,89 +70,76 @@ namespace MacroTracker.Services
                     ctx.Foods.Add(foodRelation);
                         }
                     }
-                }*/
+                }
+                return ctx.SaveChanges() == savedItems;
             }
         }
 
-        public IEnumerable<IntakeListItem> GetIntakes()
+        public IEnumerable<MealListItem> GetMeals()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .Intakes
+                        .Meals
                         .Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
-                                new IntakeListItem
+                                new MealListItem
                                 {
-                                    IntakeId = e.IntakeId,
                                     MealId = e.MealId,
-                                    FoodQty = e.FoodQty,
-                                    FoodId = e.FoodId,
-                                    Food = e.Food.FoodName
+                                    MealName = e.MealName,
+                                    Calories = (int)e.Intake.Select( c => c.Food.Calories * c.FoodQty).Sum()
                                 }
-                        );
+                        );;
                 return query.ToArray();
             }
         }
 
-        public IntakeDetail GetIntakeById(int id)
+        public MealDetail GetMealById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Intakes
-                        .Single(e => e.IntakeId == id && e.OwnerId == _userId);
+                        .Meals
+                        .Single(e => e.MealId == id && e.OwnerId == _userId);
                 return
-                    new IntakeDetail
+                    new MealDetail
                     {
-                        IntakeId = entity.IntakeId,
                         MealId = entity.MealId,
-                        DateTime = entity.Meal.DateTime,
-                        FoodQty = entity.FoodQty,
-                        Food = new FoodListItem
-                        {
-                            FoodId = entity.FoodId,
-                            FoodName = entity.Food.FoodName,
-                            Calories = entity.Food.Calories,
-                            Proteins = entity.Food.Proteins,
-                            Fats = entity.Food.Fats,
-                            Carbs = entity.Food.Carbs,
-                        }
+                        MealName = entity.MealName,
+                        MealContent = entity.MealContent,
                     };
             }
         }
 
-        public bool UpdateIntake(IntakeEdit model)
+        public bool UpdateMeal(MealEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Intakes
-                        .Single(e => e.IntakeId == model.IntakeId && e.OwnerId == _userId);
+                        .Meals
+                        .Single(e => e.MealId == model.MealId && e.OwnerId == _userId);
 
-                entity.IntakeId = model.IntakeId;
-                entity.MealId = model.MealId;
-                entity.FoodQty = model.FoodQty;
-                entity.FoodId = model.FoodId;
+                entity.MealName = model.MealName;
+                entity.MealContent = model.MealContent;
                
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteIntake(int intakeId)
+        public bool DeleteMeal(int mealId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Intakes
-                        .Single(e => e.IntakeId == intakeId && e.OwnerId == _userId);
+                        .Meals
+                        .Single(e => e.MealId == mealId && e.OwnerId == _userId);
 
-                ctx.Intakes.Remove(entity);
+                ctx.Meals.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

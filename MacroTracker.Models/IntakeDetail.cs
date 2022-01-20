@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,15 +10,15 @@ using System.Threading.Tasks;
 namespace MacroTracker.Models
 {
     public class IntakeDetail
-    {
-        [Display(Name = "Intake Id")]
+    {      
         public int IntakeId { get; set; }
+             
+        public int MealId { get; set; }
 
-        [Display(Name = "Intake Name")]
-        public string IntakeName { get; set; }
+        public DateTime DateTime { get; set; }
 
-        public string FoodDetail { get; set; }
-      
         public decimal FoodQty { get; set; }
+      
+        public FoodListItem Food { get; set; }
     }
 }

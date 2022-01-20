@@ -8,18 +8,20 @@ using System.Threading.Tasks;
 
 namespace MacroTracker.Models
 {
-    public class IntakeEdit
+    public class MealCreate
     {
         [Required]
-        public int IntakeId { get; set; }
-        
-        [Required]
-        public int MealId { get; set; }
+        public DateTime DateTime { get; set; }
 
         [Required]
-        public decimal FoodQty { get; set; }
+        public Guid OwnerId { get; set; }
 
         [Required]
-        public int FoodId { get; set; }       
+        public string MealName { get; set; }
+
+        [Required]
+        public string MealContent { get; set; }
+
+        public List<FoodComponent> Food { get; set; }
     }
 }

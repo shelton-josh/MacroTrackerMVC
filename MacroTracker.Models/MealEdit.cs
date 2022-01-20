@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace MacroTracker.Models
 {
-    public class IntakeEdit
+    public class MealEdit
     {
-        [Required]
-        public int IntakeId { get; set; }
-        
-        [Required]
         public int MealId { get; set; }
 
-        [Required]
-        public decimal FoodQty { get; set; }
+        public string MealName { get; set; }
 
-        [Required]
-        public int FoodId { get; set; }       
+        public string MealContent { get; set; }
+
+        public virtual Intake Intake { get; set; }
+
+        public int IntakeQty { get; set; }
+
+        public string IntakeDetail { get; set; }
     }
 }

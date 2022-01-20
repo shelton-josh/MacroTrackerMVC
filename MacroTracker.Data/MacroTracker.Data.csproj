@@ -57,49 +57,12 @@
     <Compile Include="Food.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Intake.cs" />
-    <Compile Include="Migrations\202201102034421_InitialCreate.cs" />
-    <Compile Include="Migrations\202201102034421_InitialCreate.Designer.cs">
-      <DependentUpon>202201102034421_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201111534322_FoodGuid.cs" />
-    <Compile Include="Migrations\202201111534322_FoodGuid.Designer.cs">
-      <DependentUpon>202201111534322_FoodGuid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201112302246_Intake.cs" />
-    <Compile Include="Migrations\202201112302246_Intake.Designer.cs">
-      <DependentUpon>202201112302246_Intake.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201131807439_IntakeFoodDetail.cs" />
-    <Compile Include="Migrations\202201131807439_IntakeFoodDetail.Designer.cs">
-      <DependentUpon>202201131807439_IntakeFoodDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201131845081_FoodMacroDecimals.cs" />
-    <Compile Include="Migrations\202201131845081_FoodMacroDecimals.Designer.cs">
-      <DependentUpon>202201131845081_FoodMacroDecimals.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Meal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202201102034421_InitialCreate.resx">
-      <DependentUpon>202201102034421_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201111534322_FoodGuid.resx">
-      <DependentUpon>202201111534322_FoodGuid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201112302246_Intake.resx">
-      <DependentUpon>202201112302246_Intake.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201131807439_IntakeFoodDetail.resx">
-      <DependentUpon>202201131807439_IntakeFoodDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201131845081_FoodMacroDecimals.resx">
-      <DependentUpon>202201131845081_FoodMacroDecimals.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

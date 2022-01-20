@@ -1,3 +1,4 @@
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\obj\Debug\MacroTrackerMVC.csproj.AssemblyReference.cache
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\obj\Debug\MacroTrackerMVC.csproj.CoreCompileInputs.cache
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\MacroTrackerMVC.dll.config
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\MacroTrackerMVC.dll
@@ -111,7 +112,6 @@ C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrack
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\obj\Debug\MacroTrackerMVC.csproj.AssemblyReference.cache
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\obj\Debug\MacroTrackerMVC.csproj.CopyComplete
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\obj\Debug\MacroTrackerMVC.dll
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\obj\Debug\MacroTrackerMVC.pdb
