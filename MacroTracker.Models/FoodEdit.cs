@@ -12,8 +12,8 @@ namespace MacroTracker.Models
         public string FoodName { get; set; }
         public string Content { get; set; }
         public int Calories { get; set; }
-        public int Proteins { get; set; }
-        public int Fats { get; set; }
-        public int Carbs { get; set; }
+        public decimal Proteins { get; set; }
+        public decimal Fats { get; set; }
+        public decimal Carbs { get; set; }
     }
 }

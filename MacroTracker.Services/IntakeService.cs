@@ -17,6 +17,27 @@ namespace MacroTracker.Services
             _userId = userId;
         }
 
+        public IntakeCreate CreateGet()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var starterModel = new IntakeCreate()
+                {
+                    Food = ctx.Foods.OrderBy(x => x.FoodName).Select(e => new FoodComponent
+                    {
+                        FoodId = e.FoodId,
+                        FoodName = e.FoodName,
+                        Calories = e.Calories,
+                        Proteins = e.Proteins,
+                        Fats = e.Fats,
+                        Carbs = e.Carbs,
+                        Quantity = 0,
+                    }).ToList(),
+                };
+            return starterModel;
+            }
+        }
+
         public bool CreateIntake(IntakeCreate model)
         {
             var entity =
@@ -24,14 +45,30 @@ namespace MacroTracker.Services
                 {
                     OwnerId = _userId,
                     IntakeName = model.IntakeName,
-                    FoodId = model.FoodId,
-                    FoodQty = model.FoodQty
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
+                //int savedItems = 0;
                 ctx.Intakes.Add(entity);
                 return ctx.SaveChanges() == 1;
+                //if (ctx.SaveChanges() == 1)
+                /*{
+                    foreach (var item in model.Food)
+                    {
+                        if (item.Quantity != 0)
+                        {
+                            var lastIntake = ctx.Intakes.ToList();
+                            var foodRelation = new Food
+                            {
+                                FoodId = lastIntake.Last().IntakeId,
+                                FoodName = item.FoodName,
+                            };
+                    ++savedItems;
+                    ctx.Foods.Add(foodRelation);
+                        }
+                    }
+                }*/
             }
         }
 

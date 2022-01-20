@@ -13,6 +13,23 @@ namespace MacroTrackerMVC.Controllers
     [Authorize]
     public class IntakeController : Controller
     {
+
+        public IEnumerable<SelectListItem> GetFoods()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var Service = new FoodService(userId);
+            var List = Service.GetFoods();
+
+            var SelectList = List.Select(
+                                        e =>
+                                            new SelectListItem
+                                            {
+                                                Value = e.FoodId.ToString(),
+                                                Text = e.FoodName
+                                            }
+                                        ).ToList();
+            return SelectList;
+        }
         
         // GET: Food
         public ActionResult Index()
@@ -29,6 +46,8 @@ namespace MacroTrackerMVC.Controllers
         public ActionResult Create()
         {
             return View();
+            //var starterModel = Service().CreateGet();
+            //return View(starterModel);
         }
 
         [HttpPost]
@@ -40,13 +59,13 @@ namespace MacroTrackerMVC.Controllers
             var service = CreateIntakeService();
 
             if (service.CreateIntake(model))
+            //if (Service().CreateIntake(model))
             {
                 TempData["SaveResult"] = "Your Intake was created.";
                 return RedirectToAction("Index");
             };
 
             ModelState.AddModelError("", "Intake could not be created.");
-
             return View(model);
         }
 

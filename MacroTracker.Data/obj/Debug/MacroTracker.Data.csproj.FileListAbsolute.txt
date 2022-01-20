@@ -18,3 +18,5 @@ C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrack
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.csproj.CopyComplete
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.dll
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.pdb
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.csproj.AssemblyReference.cache
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Data\obj\Debug\MacroTracker.Data.Migrations.FoodMacroDecimals.resources

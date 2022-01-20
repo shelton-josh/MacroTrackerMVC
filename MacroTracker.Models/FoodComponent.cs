@@ -7,16 +7,14 @@ using System.Threading.Tasks;
 
 namespace MacroTracker.Models
 {
-    public class FoodDetail
+    public class FoodComponent
     {
         [Display(Name = "Food Id")]
         public int FoodId { get; set; }
 
         [Display(Name = "Food Name")]
         public string FoodName { get; set; }
-
-        public string Content { get; set; }
-
+  
         public int Calories { get; set; }
 
         public decimal Proteins { get; set; }
@@ -24,5 +22,6 @@ namespace MacroTracker.Models
         public decimal Fats { get; set; }
 
         public decimal Carbs { get; set; }
+        public int Quantity { get; set; }
     }
 }

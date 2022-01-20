@@ -27,12 +27,12 @@ namespace MacroTracker.Data
         public int Calories { get; set; }
 
         [Required]
-        public int Proteins { get; set; }
+        public decimal Proteins { get; set; }
 
         [Required]
-        public int Fats { get; set; }
+        public decimal Fats { get; set; }
 
         [Required]
-        public int Carbs { get; set; }
+        public decimal Carbs { get; set; }
     }
 }

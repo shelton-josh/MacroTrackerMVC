@@ -1,3 +1,5 @@
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\obj\Debug\MacroTracker.Services.csproj.AssemblyReference.cache
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\obj\Debug\MacroTracker.Services.csproj.CoreCompileInputs.cache
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\bin\Debug\MacroTracker.Services.dll.config
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\bin\Debug\MacroTracker.Services.dll
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\bin\Debug\MacroTracker.Services.pdb
@@ -15,8 +17,6 @@ C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrack
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\obj\Debug\MacroTracker.Services.csproj.AssemblyReference.cache
-C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\obj\Debug\MacroTracker.Services.csproj.CoreCompileInputs.cache
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\obj\Debug\MacroTracker.Services.csproj.CopyComplete
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\obj\Debug\MacroTracker.Services.dll
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTracker.Services\obj\Debug\MacroTracker.Services.pdb
