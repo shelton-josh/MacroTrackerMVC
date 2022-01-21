@@ -9,44 +9,49 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-@if (TempData.ContainsKey("SaveResult"))
-{
-    <div class="alert alert-success fade in" role="alert">
-
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-        @TempData["SaveResult"]
-    </div>
-}
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.IntakeId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IntakeName)
+            @Html.DisplayNameFor(model => model.MealId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Food)
         </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IntakeId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IntakeName)
-            </td>
-
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.IntakeId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.IntakeId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.IntakeId })
-            </td>
-        </tr>
-    }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IntakeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MealId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoodQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoodId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Food)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.IntakeId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.IntakeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IntakeId })
+        </td>
+    </tr>
+}
 
 </table>

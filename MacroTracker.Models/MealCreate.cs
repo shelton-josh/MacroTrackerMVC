@@ -14,7 +14,7 @@ namespace MacroTracker.Models
         public DateTime DateTime { get; set; }
 
         [Required]
-        public Guid OwnerId { get; set; }
+        public int MealId { get; set; }
 
         [Required]
         public string MealName { get; set; }

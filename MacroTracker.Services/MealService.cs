@@ -83,15 +83,20 @@ namespace MacroTracker.Services
                     ctx
                         .Meals
                         .Where(e => e.OwnerId == _userId)
+                        .ToList()
                         .Select(
                             e =>
+                            
                                 new MealListItem
                                 {
                                     MealId = e.MealId,
                                     MealName = e.MealName,
-                                    Calories = (int)e.Intake.Select( c => c.Food.Calories * c.FoodQty).Sum()
+                                    Calories = Decimal.ToInt32(e.Intake.Select(c => c.Food.Calories * c.FoodQty).Sum()),
+                                    Proteins = Decimal.ToInt32(e.Intake.Select(c => c.Food.Proteins * c.FoodQty).Sum()),
+                                    Carbs = Decimal.ToInt32(e.Intake.Select(c => c.Food.Carbs * c.FoodQty).Sum()),
+                                    Fats = Decimal.ToInt32(e.Intake.Select(c => c.Food.Fats * c.FoodQty).Sum()),
                                 }
-                        );;
+                        );
                 return query.ToArray();
             }
         }
