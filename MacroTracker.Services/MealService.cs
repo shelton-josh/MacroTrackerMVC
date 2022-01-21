@@ -92,9 +92,9 @@ namespace MacroTracker.Services
                                     MealId = e.MealId,
                                     MealName = e.MealName,
                                     Calories = Decimal.ToInt32(e.Intake.Select(c => c.Food.Calories * c.FoodQty).Sum()),
-                                    Proteins = Decimal.ToInt32(e.Intake.Select(c => c.Food.Proteins * c.FoodQty).Sum()),
-                                    Carbs = Decimal.ToInt32(e.Intake.Select(c => c.Food.Carbs * c.FoodQty).Sum()),
-                                    Fats = Decimal.ToInt32(e.Intake.Select(c => c.Food.Fats * c.FoodQty).Sum()),
+                                    Proteins = (e.Intake.Select(c => c.Food.Proteins * c.FoodQty).Sum()),
+                                    Carbs = (e.Intake.Select(c => c.Food.Carbs * c.FoodQty).Sum()),
+                                    Fats = (e.Intake.Select(c => c.Food.Fats * c.FoodQty).Sum()),
                                 }
                         );
                 return query.ToArray();
