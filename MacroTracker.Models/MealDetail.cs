@@ -16,6 +16,7 @@ namespace MacroTracker.Models
         [Display(Name = "Meal Name")]
         public string MealName { get; set; }
 
+        [Display(Name = "This Meal Contains")]
         public string MealContent { get; set; }
 
         public string IntakeDetail { get; set; }

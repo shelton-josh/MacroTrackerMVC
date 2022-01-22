@@ -19,5 +19,6 @@ namespace MacroTracker.Models
         public decimal Proteins { get; set; }
         public decimal Carbs { get; set; }
         public decimal Fats { get; set; }
+        public DateTime DateTime { get; set; }
     }
 }

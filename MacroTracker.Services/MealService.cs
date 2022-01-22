@@ -91,6 +91,7 @@ namespace MacroTracker.Services
                                 {
                                     MealId = e.MealId,
                                     MealName = e.MealName,
+                                    DateTime = e.DateTime,
                                     Calories = Decimal.ToInt32(e.Intake.Select(c => c.Food.Calories * c.FoodQty).Sum()),
                                     Proteins = (e.Intake.Select(c => c.Food.Proteins * c.FoodQty).Sum()),
                                     Carbs = (e.Intake.Select(c => c.Food.Carbs * c.FoodQty).Sum()),
