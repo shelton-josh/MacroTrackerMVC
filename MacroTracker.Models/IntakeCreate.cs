@@ -10,13 +10,16 @@ namespace MacroTracker.Models
 {
     public class IntakeCreate
     {      
-        [Required]   
+        [Required]
+        [Display(Name = "Meal Id")]
         public int MealId { get; set; }
       
         [Required]
+        [Display(Name = "Food Quantity")]
         public decimal FoodQty { get; set; }
 
         [Required]
+        [Display(Name = "Food Id")]
         public int FoodId { get; set; }
     }
 }

@@ -12,8 +12,10 @@ namespace MacroTracker.Models
     {
         public int MealId { get; set; }
 
+        [Display(Name = "Meal Name")]
         public string MealName { get; set; }
 
+        [Display(Name = "Meal Content")]
         public string MealContent { get; set; }
 
         public virtual Intake Intake { get; set; }
