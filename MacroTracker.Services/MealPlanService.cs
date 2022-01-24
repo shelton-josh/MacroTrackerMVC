@@ -28,10 +28,7 @@ namespace MacroTracker.Services
                     {
                         MealId = e.MealId,
                         MealName = e.MealName,
-                        //Calories = e.,
-                        //Proteins = e.Proteins,
-                        //Fats = e.Fats,
-                        //Carbs = e.Carbs,
+                        Calories = (int)(e.Intake.Select(f => f.Food.Calories * f.FoodQty).Sum()),
                         Quantity = 0,
                     }).ToList(),
                 };
