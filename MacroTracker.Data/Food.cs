@@ -21,7 +21,7 @@ namespace MacroTracker.Data
         public string FoodName { get; set; }
 
         [Required]
-        public string Content { get; set; }
+        public decimal Serving { get; set; }
 
         [Required]
         public int Calories { get; set; }

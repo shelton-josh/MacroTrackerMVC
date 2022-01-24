@@ -14,7 +14,9 @@ namespace MacroTracker.Models
 
         [Display(Name = "Food Name")]
         public string FoodName { get; set; }
-  
+
+        public decimal Serving { get; set; }
+
         public int Calories { get; set; }
 
         public decimal Proteins { get; set; }

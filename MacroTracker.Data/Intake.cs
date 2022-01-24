@@ -28,6 +28,5 @@ namespace MacroTracker.Data
 
         [ForeignKey(nameof(FoodId))]
         public virtual Food Food { get; set; }
-
     }
 }

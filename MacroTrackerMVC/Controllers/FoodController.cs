@@ -65,7 +65,7 @@ namespace MacroTrackerMVC.Controllers
                 {
                     FoodId = detail.FoodId,
                     FoodName = detail.FoodName,
-                    Content = detail.Content,
+                    Serving = detail.Serving,
                     Calories = detail.Calories,
                     Proteins = detail.Proteins,
                     Fats = detail.Fats,

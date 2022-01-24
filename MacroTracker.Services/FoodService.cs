@@ -24,7 +24,7 @@ namespace MacroTracker.Services
                 {
                     OwnerId = _userId,
                     FoodName = model.FoodName,
-                    Content = model.Content,
+                    Serving = model.Serving,
                     Calories = model.Calories,
                     Proteins = model.Proteins,
                     Fats = model.Fats,
@@ -71,7 +71,7 @@ namespace MacroTracker.Services
                     {
                         FoodId = entity.FoodId,
                         FoodName = entity.FoodName,
-                        Content = entity.Content,
+                        Serving = entity.Serving,
                         Calories = entity.Calories,
                         Proteins = entity.Proteins,
                         Fats = entity.Fats,
@@ -90,7 +90,7 @@ namespace MacroTracker.Services
                         .Single(e => e.FoodId == model.FoodId && e.OwnerId == _userId);
 
                 entity.FoodName = model.FoodName;
-                entity.Content = model.Content;
+                entity.Serving = model.Serving;
                 entity.Calories = model.Calories;
                 entity.Proteins = model.Proteins;
                 entity.Fats = model.Fats;

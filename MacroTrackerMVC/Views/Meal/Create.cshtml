@@ -14,38 +14,87 @@
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
+        <div class="form-horizontal col-md-6">
+            <div class="mealcreate1">
+                <h4>MealCreate</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DateTime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DateTime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
 
-        <div class="form-horizontal">
-            <h4>MealCreate</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.DateTime, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.DateTime, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DateTime, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MealName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.MealName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MealName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MealContent, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.MealContent, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MealContent, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
                 </div>
             </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.MealName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.MealName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.MealName, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.MealContent, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.MealContent, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.MealContent, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+        <div class="col-md-6">
+            <div class="mealcreate2">
+                <h4>Foods</h4>
+                <hr />
+                <div class="form-group" style="height: 40rem; overflow-y: auto;">
+                    <table class="table table-striped" id="mealTblcreate">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Food.FirstOrDefault().FoodName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Food.FirstOrDefault().Serving)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Food.FirstOrDefault().Calories)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Food.FirstOrDefault().Quantity)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Food.Count(); i++)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(m => m.Food[i].FoodName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.HiddenFor(m => m.Food[i].FoodName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => m.Food[i].Serving, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.HiddenFor(m => m.Food[i].FoodId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => m.Food[i].Calories, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.HiddenFor(m => m.Food[i].Calories)
+                                    </td>
+                                    <td>
+                                        @Html.EditorFor(m => m.Food[i].Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -59,6 +108,17 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('#mealTblcreate').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+            });
+        })
+    </script>
 }
 
 <style>
@@ -66,8 +126,24 @@
         opacity: .8;
     }
 
+    .mealcreate1 {
+        background-image: url("../../Content/images/pastalgreen.jpg");
+        background-size: contain;
+        background-color: white;
+        border-radius: 20px 20px 20px 20px;
+        color: black;
+    }
+
+    .mealcreate2 {
+        background: url("../../Content/images/4e4cfb5ced3442900334d1e470a28b37.jpg");
+        background-size: contain;
+        background-color: white;
+        border-radius: 20px 20px 20px 20px;
+        color: black;
+    }
+
     .btn {
-        background-image: url(../../Content/images/marbel.jpg);
+        
         color: black;
     }
 </style>

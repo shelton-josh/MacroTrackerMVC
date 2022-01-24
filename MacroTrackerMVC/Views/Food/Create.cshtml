@@ -27,10 +27,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Serving, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Serving, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Serving, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -89,8 +89,15 @@
             opacity: .8;
         }
 
+        .foodcreate {
+            background-image: url("../../Content/images/pastalgreen.jpg");
+            background-size: contain;
+            background-color: white;
+            border-radius: 20px 20px 20px 20px;
+            color: black;
+        }
+
         .btn {
-            background-image: url(../../Content/images/marbel.jpg);
             color: black;
         }
     </style>

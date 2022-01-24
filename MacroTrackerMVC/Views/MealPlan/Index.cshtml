@@ -1,0 +1,105 @@
+﻿@model IEnumerable<MacroTracker.Models.MealPlanListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
+<h2>Meal Plan Index</h2>
+
+<div class="mealindex">
+
+    <p>
+        <a class="btn btn-default" href="/MealPlan/Create">Create Meal Plan &raquo;</a>
+    </p>
+
+    <table class="table table-striped" id="mealTbl">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MealPlanId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MealPlanName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalCalories)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalProteins)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalCarbs)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalFats)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateTime)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MealPlanId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MealPlanName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalCalories)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalProteins)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalCarbs)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalFats)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTime)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('#mealTbl').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+            });
+        })
+    </script>
+}
+
+<style>
+    td input {
+        opacity: .8;
+    }
+
+    .btn {
+        background-image: url(../../Content/images/marbel.jpg);
+        color: black;
+    }
+</style>

@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MealIntake.cs" />
+    <Compile Include="MealPlan.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Intake.cs" />

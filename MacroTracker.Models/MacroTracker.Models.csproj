@@ -62,11 +62,16 @@
     <Compile Include="IntakeCreate.cs" />
     <Compile Include="IntakeDetail.cs" />
     <Compile Include="IntakeListItem.cs" />
+    <Compile Include="MealComponent.cs" />
+    <Compile Include="MealIntakeCreate.cs" />
+    <Compile Include="MealIntakeListItem.cs" />
     <Compile Include="MealListItem.cs" />
     <Compile Include="MealEdit.cs" />
     <Compile Include="MealDetail.cs" />
     <Compile Include="MealCreate.cs" />
     <Compile Include="IntakeEdit.cs" />
+    <Compile Include="MealPlanCreate.cs" />
+    <Compile Include="MealPlanListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

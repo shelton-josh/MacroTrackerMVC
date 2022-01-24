@@ -23,10 +23,12 @@ namespace MacroTracker.Services
             {
                 var starterModel = new MealCreate()
                 {
+                    DateTime = DateTime.Now,
                     Food = ctx.Foods.OrderBy(x => x.FoodName).Select(e => new FoodComponent
                     {
                         FoodId = e.FoodId,
                         FoodName = e.FoodName,
+                        Serving = e.Serving,
                         Calories = e.Calories,
                         Proteins = e.Proteins,
                         Fats = e.Fats,
@@ -34,7 +36,7 @@ namespace MacroTracker.Services
                         Quantity = 0,
                     }).ToList(),
                 };
-            return starterModel;
+                return starterModel;
             }
         }
 
@@ -53,21 +55,22 @@ namespace MacroTracker.Services
             {
                 int savedItems = 0;
                 ctx.Meals.Add(entity);
-                return ctx.SaveChanges() == 1;
                 if (ctx.SaveChanges() == 1)
                 {
                     foreach (var item in model.Food)
                     {
                         if (item.Quantity != 0)
                         {
-                            var lastIntake = ctx.Intakes.ToList();
-                            var foodRelation = new Food
+                            var lastMeal = ctx.Meals.OrderByDescending(m => m.MealId).First();
+                            var foodRelation = new Intake
                             {
-                                FoodId = lastIntake.Last().IntakeId,
-                                FoodName = item.FoodName,
+                                OwnerId = _userId,
+                                FoodId = item.FoodId,
+                                MealId = lastMeal.MealId,
+                                FoodQty = item.Quantity,
                             };
-                    ++savedItems;
-                    ctx.Foods.Add(foodRelation);
+                            ++savedItems;
+                            ctx.Intakes.Add(foodRelation);
                         }
                     }
                 }
@@ -86,7 +89,7 @@ namespace MacroTracker.Services
                         .ToList()
                         .Select(
                             e =>
-                            
+
                                 new MealListItem
                                 {
                                     MealId = e.MealId,
@@ -131,7 +134,7 @@ namespace MacroTracker.Services
 
                 entity.MealName = model.MealName;
                 entity.MealContent = model.MealContent;
-               
+
                 return ctx.SaveChanges() == 1;
             }
         }

@@ -16,8 +16,8 @@ namespace MacroTracker.Models
         public string FoodName { get; set; }
 
         [Required]
-        [MaxLength(200)]
-        public string Content { get; set; }
+        [Display(Name ="Servings In Ounces")]
+        public decimal Serving { get; set; }
 
         [Required]
         public int Calories { get; set; }
