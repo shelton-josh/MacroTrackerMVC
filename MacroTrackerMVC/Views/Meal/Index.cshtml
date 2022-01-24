@@ -4,7 +4,12 @@
     ViewBag.Title = "Index";
 }
 
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
 <h2>Index</h2>
+
+<div class="mealindex">
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -39,43 +44,43 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MealId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MealName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Calories)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Proteins)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Carbs)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fats)
-            </td>
-            <td data-order="@item.DateTime.Ticks">
-                @Html.DisplayFor(modelItem => item.DateTime)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.MealId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.MealId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.MealId })
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MealId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MealName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calories)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proteins)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Carbs)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fats)
+                </td>
+                <td data-order="@item.DateTime.Ticks">
+                    @Html.DisplayFor(modelItem => item.DateTime)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MealId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MealId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MealId })
+                </td>
+            </tr>
         }
     </tbody>
 </table>
-
+    </div>
 
 @section Scripts{
 
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
     <script>
         $(document).ready(function () {
             $('#mealTbl').DataTable({

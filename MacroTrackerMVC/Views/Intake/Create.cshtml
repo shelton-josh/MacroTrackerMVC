@@ -4,8 +4,11 @@
     ViewBag.Title = "Create";
 }
 
+<link href="~/Content/Site.css" rel="stylesheet" />
+
 <h2>Create</h2>
 
+<div class="intakecreate">
 
 @using (Html.BeginForm())
 {
@@ -47,7 +50,7 @@
     </div>
 }
 
-
+    </div>
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>

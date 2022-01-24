@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('images/external-content.duckduckgo.com.jpg');
     margin: 0;
 }
 
@@ -38,8 +39,102 @@ textarea {
     color: black;
 }
 
-.navbar {
-    
-  
-   
+.foodindex {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.foodcreate {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.foodedit {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.fooddelete {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.fooddetails {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.mealindex {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.mealcreate {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.mealedit {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.mealdelete {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.mealdetails {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.intakeindex {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.intakecreate {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.intakeedit {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.intakedelete {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.intakedetails {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.aboutview {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.contactview {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.registerview {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.loginview {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.manageview {
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
 }

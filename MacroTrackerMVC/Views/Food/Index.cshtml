@@ -4,54 +4,57 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<link href="~/Content/Site.css" rel="stylesheet" />
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+    <h2>Index</h2>
+<div class="foodindex">
 
-@if (TempData.ContainsKey("SaveResult"))
-{
-    <div class="alert alert-success fade in" role="alert">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
 
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-        @TempData["SaveResult"]
-    </div>
-}
-<table class="table table-striped" id="mealTbl">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FoodId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FoodName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    @if (TempData.ContainsKey("SaveResult"))
+    {
+        <div class="alert alert-success fade in" role="alert">
+
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            @TempData["SaveResult"]
+        </div>
+    }
+    <table class="table table-striped" id="mealTbl">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FoodId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FoodName)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.FoodId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.FoodId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.FoodId })
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.FoodId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FoodName)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
-
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FoodId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FoodName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.FoodId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.FoodId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.FoodId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 @section Scripts{
 
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>

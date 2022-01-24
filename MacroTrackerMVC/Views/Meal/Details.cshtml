@@ -4,37 +4,43 @@
     ViewBag.Title = "Details";
 }
 
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
 <h2>Details</h2>
 
-<div>
-    <h4>MealDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MealId)
-        </dt>
+<div class="mealdetails">
 
-        <dd>
-            @Html.DisplayFor(model => model.MealId)
-        </dd>
+    <div>
+        <h4>MealDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MealId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MealName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MealId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MealName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MealName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MealContent)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MealName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MealContent)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MealContent)
+            </dt>
 
-    </dl>
+            <dd>
+                @Html.DisplayFor(model => model.MealContent)
+            </dd>
+
+        </dl>
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.MealId }) |
