@@ -11,7 +11,7 @@ namespace MacroTracker.Models
     public class MealCreate
     {
         [Required]
-        [Display(Name = "Input The Current Date")]
+        [Display(Name = "Date")]
         public DateTime DateTime { get; set; }
 
         [Required]
@@ -19,11 +19,11 @@ namespace MacroTracker.Models
         public int MealId { get; set; }
 
         [Required]
-        [Display(Name = "Meal Name")]
+        [Display(Name = "Name")]
         public string MealName { get; set; }
 
         [Required]
-        [Display(Name = "Meal Content")]
+        [Display(Name = "Content")]
         public string MealContent { get; set; }
 
         public List<FoodComponent> Food { get; set; }

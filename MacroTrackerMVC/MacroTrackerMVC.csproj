@@ -196,6 +196,7 @@
     <Content Include="Content\images\geometric-white.jpg" />
     <Content Include="Content\images\Italy-Orange1_abbd16c3-6d83-4414-849f-1a9aee869af0.jpg" />
     <Content Include="Content\images\marbel.jpg" />
+    <Content Include="Content\images\multiple color quilt.jpg" />
     <Content Include="Content\images\pastalgreen.jpg" />
     <Content Include="Content\images\pastalgreenknit.jpg" />
     <Content Include="Content\images\ponderosa-pine-reclaimed-wood-wall-realcraft-15577323077728_1200x1200.jpg" />
@@ -274,6 +275,12 @@
     <Content Include="Views\MealIntake\Create.cshtml" />
     <Content Include="Views\MealIntake\Index.cshtml" />
     <Content Include="Views\MealPlan\Create.cshtml" />
+    <Content Include="Views\MealPlan\Details.cshtml" />
+    <Content Include="Views\MealPlan\Edit.cshtml" />
+    <Content Include="Views\MealPlan\Delete.cshtml" />
+    <Content Include="Views\MealIntake\Details.cshtml" />
+    <Content Include="Views\MealIntake\Edit.cshtml" />
+    <Content Include="Views\MealIntake\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

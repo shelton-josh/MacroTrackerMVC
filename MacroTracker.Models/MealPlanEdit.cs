@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MacroTracker.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,24 +8,20 @@ using System.Threading.Tasks;
 
 namespace MacroTracker.Models
 {
-    public class MealPlanCreate
+    public class MealPlanEdit
     {
-        [Required]
-        [Display(Name = "Date")]
-        public DateTime DateTime { get; set; }
-
-        [Required]
-        [Display(Name = "Meal Plan Id")]
         public int MealPlanId { get; set; }
 
-        [Required]
         [Display(Name = "Name")]
         public string MealPlanName { get; set; }
 
-        [Required]
         [Display(Name = "Content")]
         public string MealPlanContent { get; set; }
 
-        public List<MealComponent> Meal { get; set; }
+        public virtual MealIntake MealIntake { get; set; }
+
+        public int MealIntakeQty { get; set; }
+
+        public string MealIntakeDetail { get; set; }
     }
 }

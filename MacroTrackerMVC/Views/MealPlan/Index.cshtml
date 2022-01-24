@@ -19,9 +19,6 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.MealPlanId)
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.MealPlanName)
                 </th>
                 <th>
@@ -47,9 +44,6 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.MealPlanId)
-                    </td>
-                    <td>
                         @Html.DisplayFor(modelItem => item.MealPlanName)
                     </td>
                     <td>
@@ -59,18 +53,18 @@
                         @Html.DisplayFor(modelItem => item.TotalProteins)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.TotalCarbs)
+                        @Html.DisplayFor(modelItem => item.TotalFats)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.TotalFats)
+                        @Html.DisplayFor(modelItem => item.TotalCarbs)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.DateTime)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MealPlanId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.MealPlanId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MealPlanId })
                     </td>
                 </tr>
             }

@@ -70,51 +70,51 @@ namespace MacroTracker.Services
             }
         }
 
-        //public MealIntakeDetail GetMealIntakeById(int id)
-        //{
-        //    using (var ctx = new ApplicationDbContext())
-        //    {
-        //        var entity =
-        //            ctx
-        //                .MealIntakes
-        //                .Single(e => e.MealIntakeId == id && e.OwnerId == _userId);
-        //        return
-        //            new MealIntakeDetail
-        //            {
-        //                MealIntakeId = entity.MealIntakeId,
-        //                MealId = entity.MealId,
-        //                DateTime = entity.Meal.DateTime,
-        //                MealQty = entity.MealQty,
-        //                Meal = new MealListItem
-        //                {
-        //                    MealId = entity.MealId,
-        //                    MealName = entity.Meal.MealName,
-        //                    TotalCalories = entity.Meal.TotalCalories,
-        //                    TotalProteins = entity.Meal.TotalProteins,
-        //                    TotalFats = entity.Meal.TotalFats,
-        //                    TotalCarbs = entity.Meal.TotalCarbs,
-        //                }
-        //            };
-        //    }
-        //}
+        public MealIntakeDetail GetMealIntakeById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MealIntakes
+                        .Single(e => e.MealIntakeId == id && e.OwnerId == _userId);
+                return
+                    new MealIntakeDetail
+                    {
+                        MealIntakeId = entity.MealIntakeId,
+                        MealPlanId = entity.MealPlanId,
+                        DateTime = entity.Meal.DateTime,
+                        MealQty = entity.MealQty,
+                        Meal = new MealListItem
+                        {
+                            MealId = entity.MealId,
+                            MealName = entity.Meal.MealName,
+                            Calories = entity.MealPlan.Calories,
+                            Proteins = entity.MealPlan.Proteins,
+                            Fats = entity.MealPlan.Fats,
+                            Carbs = entity.MealPlan.Carbs,
+                        }
+                    };
+            }
+        }
 
-        //public bool UpdateMealIntake(MealIntakeEdit model)
-        //{
-        //    using (var ctx = new ApplicationDbContext())
-        //    {
-        //        var entity =
-        //            ctx
-        //                .MealIntakes
-        //                .Single(e => e.MealIntakeId == model.MealIntakeId && e.OwnerId == _userId);
+        public bool UpdateMealIntake(MealIntakeEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MealIntakes
+                        .Single(e => e.MealIntakeId == model.MealIntakeId && e.OwnerId == _userId);
 
-        //        entity.MealIntakeId = model.MealIntakeId;
-        //        entity.MealId = model.MealId;
-        //        entity.MealQty = model.MealQty;
-        //        entity.MealPlanId = model.MealPlanId;
-
-        //        return ctx.SaveChanges() == 1;
-        //    }
-        //}
+                entity.MealIntakeId = model.MealIntakeId;
+                entity.MealPlanId = model.MealPlanId;
+                entity.MealQty = model.MealIntakeQty;
+                entity.MealId = model.MealId;
+                
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
         public bool DeleteMealIntake(int mealintakeId)
         {

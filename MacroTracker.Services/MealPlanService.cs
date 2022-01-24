@@ -100,6 +100,55 @@ namespace MacroTracker.Services
                 return query.ToArray();
             }
         }
+
+        public MealPlanDetail GetMealPlanById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MealPlans
+                        .Single(e => e.MealPlanId == id && e.OwnerId == _userId);
+                return
+                    new MealPlanDetail
+                    {
+                        MealPlanId = entity.MealPlanId,
+                        MealPlanName = entity.MealPlanName,
+                        MealPlanContent = entity.MealPlanContent,
+                    };
+            }
+        }
+
+        public bool UpdateMealPlan(MealPlanEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MealPlans
+                        .Single(e => e.MealPlanId == model.MealPlanId && e.OwnerId == _userId);
+
+                entity.MealPlanName = model.MealPlanName;
+                entity.MealPlanContent = model.MealPlanContent;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteMealPlan(int mealPlanId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MealPlans
+                        .Single(e => e.MealPlanId == mealPlanId && e.OwnerId == _userId);
+
+                ctx.MealPlans.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
 

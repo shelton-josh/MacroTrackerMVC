@@ -15,9 +15,16 @@ namespace MacroTracker.Models
         [Display(Name = "Meal Plan Name")]
         public string MealPlanName { get; set; }
 
+        [Display(Name = "Total Calories")]
         public int TotalCalories { get; set; }
+
+        [Display(Name = "Total Proteins")]
         public decimal TotalProteins { get; set; }
+
+        [Display(Name = "Total Carbs")]
         public decimal TotalCarbs { get; set; }
+
+        [Display(Name = "Total Fats")]
         public decimal TotalFats { get; set; }
 
         [Display(Name = "Date Created")]

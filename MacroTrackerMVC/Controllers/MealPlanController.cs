@@ -47,74 +47,74 @@ namespace MacroTrackerMVC.Controllers
             return View(model);
         }
 
-        //public ActionResult Details(int id)
-        //{
-        //    var svc = CreateMealPlanService();
-        //    var model = svc.GetMealPlanById(id);
+        public ActionResult Details(int id)
+        {
+            var svc = CreateMealPlanService();
+            var model = svc.GetMealPlanById(id);
 
-        //    return View(model);
-        //}
+            return View(model);
+        }
 
-        //public ActionResult Edit(int id)
-        //{
-        //    var service = CreateMealPlanService();
-        //    var detail = service.GetMealPlanById(id);
-        //    var model =
-        //        new MealPlanEdit
-        //        {
-        //            MealId = detail.MealId,
-        //            MealName = detail.MealName,
-        //            IntakeDetail = detail.IntakeDetail,
-        //        };
-        //    return View(model);
-        //}
+        public ActionResult Edit(int id)
+        {
+            var service = CreateMealPlanService();
+            var detail = service.GetMealPlanById(id);
+            var model =
+                new MealPlanEdit
+                {
+                    MealPlanId = detail.MealPlanId,
+                    MealPlanName = detail.MealPlanName,
+                    MealIntakeDetail = detail.MealIntakeDetail,
+                };
+            return View(model);
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit(int id, MealEdit model)
-        //{
-        //    if (!ModelState.IsValid) return View(model);
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, MealPlanEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
 
-        //    if (model.MealId != id)
-        //    {
-        //        ModelState.AddModelError("", "Id Mismatch");
-        //        return View(model);
-        //    }
+            if (model.MealPlanId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
 
-        //    var service = CreateMealService();
+            var service = CreateMealPlanService();
 
-        //    if (service.UpdateMeal(model))
-        //    {
-        //        TempData["SaveResult"] = "Your Meal was updated.";
-        //        return RedirectToAction("Index");
-        //    }
+            if (service.UpdateMealPlan(model))
+            {
+                TempData["SaveResult"] = "Your Meal Plan was updated.";
+                return RedirectToAction("Index");
+            }
 
-        //    ModelState.AddModelError("", "Your Meal could not be updated.");
-        //    return View(model);
-        //}
+            ModelState.AddModelError("", "Your Meal Plan could not be updated.");
+            return View(model);
+        }
 
-        //[ActionName("Delete")]
-        //public ActionResult Delete(int id)
-        //{
-        //    var svc = CreateMealService();
-        //    var model = svc.GetMealById(id);
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateMealPlanService();
+            var model = svc.GetMealPlanById(id);
 
-        //    return View(model);
-        //}
+            return View(model);
+        }
 
-        //[HttpPost]
-        //[ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeletePost(int id)
-        //{
-        //    var service = CreateMealService();
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateMealPlanService();
 
-        //    service.DeleteMeal(id);
+            service.DeleteMealPlan(id);
 
-        //    TempData["SaveResult"] = "Your Meal was deleted.";
+            TempData["SaveResult"] = "Your Meal Plan was deleted.";
 
-        //    return RedirectToAction("Index");
-        //}
+            return RedirectToAction("Index");
+        }
 
         private MealPlanService CreateMealPlanService()
         {

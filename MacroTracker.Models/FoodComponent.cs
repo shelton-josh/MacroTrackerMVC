@@ -12,9 +12,10 @@ namespace MacroTracker.Models
         [Display(Name = "Food Id")]
         public int FoodId { get; set; }
 
-        [Display(Name = "Food Name")]
+        [Display(Name = "Name")]
         public string FoodName { get; set; }
 
+        [Display(Name = "Serving Size (oz)")]
         public decimal Serving { get; set; }
 
         public int Calories { get; set; }

@@ -7,24 +7,19 @@ using System.Threading.Tasks;
 
 namespace MacroTracker.Models
 {
-    public class MealPlanCreate
+    public class MealPlanDetail
     {
-        [Required]
-        [Display(Name = "Date")]
-        public DateTime DateTime { get; set; }
-
-        [Required]
-        [Display(Name = "Meal Plan Id")]
+        [Display(Name = "Id")]
         public int MealPlanId { get; set; }
 
-        [Required]
         [Display(Name = "Name")]
         public string MealPlanName { get; set; }
 
-        [Required]
-        [Display(Name = "Content")]
+        [Display(Name = "Contains")]
         public string MealPlanContent { get; set; }
 
-        public List<MealComponent> Meal { get; set; }
+        public string MealIntakeDetail { get; set; }
+
+        public decimal MealIntakeQty { get; set; }
     }
 }

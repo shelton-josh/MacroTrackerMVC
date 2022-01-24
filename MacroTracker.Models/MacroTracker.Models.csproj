@@ -64,6 +64,8 @@
     <Compile Include="IntakeListItem.cs" />
     <Compile Include="MealComponent.cs" />
     <Compile Include="MealIntakeCreate.cs" />
+    <Compile Include="MealIntakeDetail.cs" />
+    <Compile Include="MealIntakeEdit.cs" />
     <Compile Include="MealIntakeListItem.cs" />
     <Compile Include="MealListItem.cs" />
     <Compile Include="MealEdit.cs" />
@@ -71,6 +73,8 @@
     <Compile Include="MealCreate.cs" />
     <Compile Include="IntakeEdit.cs" />
     <Compile Include="MealPlanCreate.cs" />
+    <Compile Include="MealPlanDetail.cs" />
+    <Compile Include="MealPlanEdit.cs" />
     <Compile Include="MealPlanListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

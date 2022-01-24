@@ -46,75 +46,75 @@ namespace MacroTrackerMVC.Controllers
             return View(model);
         }
 
-        //public ActionResult Details(int id)
-        //{
-        //    var svc = CreateMealIntakeService();
-        //    var model = svc.GetMealIntakeById(id);
+        public ActionResult Details(int id)
+        {
+            var svc = CreateMealIntakeService();
+            var model = svc.GetMealIntakeById(id);
 
-        //    return View(model);
-        //}
+            return View(model);
+        }
 
-        //public ActionResult Edit(int id)
-        //{
-        //    var service = CreateMealIntakeService();
-        //    var detail = service.GetMealIntakeById(id);
-        //    var model =
-        //        new MealIntakeEdit
-        //        {
-        //            IntakeId = detail.IntakeId,
-        //            MealId = detail.MealId,
-        //            FoodId = detail.Food.FoodId,
-        //            FoodQty = detail.FoodQty,
-        //        };
-        //    return View(model);
-        //}
+        public ActionResult Edit(int id)
+        {
+            var service = CreateMealIntakeService();
+            var detail = service.GetMealIntakeById(id);
+            var model =
+                new MealIntakeEdit
+                {
+                    MealIntakeId = detail.MealIntakeId,
+                    MealPlanId = detail.MealPlanId,
+                    MealId = detail.Meal.MealId,
+                    MealQty = (int)detail.MealQty,
+                };
+            return View(model);
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit(int id, IntakeEdit model)
-        //{
-        //    if (!ModelState.IsValid) return View(model);
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, MealIntakeEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
 
-        //    if (model.IntakeId != id)
-        //    {
-        //        ModelState.AddModelError("", "Id Mismatch");
-        //        return View(model);
-        //    }
+            if (model.MealIntakeId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
 
-        //    var service = CreateIntakeService();
+            var service = CreateMealIntakeService();
 
-        //    if (service.UpdateIntake(model))
-        //    {
-        //        TempData["SaveResult"] = "Your Meal was updated.";
-        //        return RedirectToAction("Index");
-        //    }
+            if (service.UpdateMealIntake(model))
+            {
+                TempData["SaveResult"] = "Your Meal Intake was updated.";
+                return RedirectToAction("Index");
+            }
 
-        //    ModelState.AddModelError("", "Your Meal could not be updated.");
-        //    return View(model);
-        //}
+            ModelState.AddModelError("", "Your Meal Intake could not be updated.");
+            return View(model);
+        }
 
-        //[ActionName("Delete")]
-        //public ActionResult Delete(int id)
-        //{
-        //    var svc = CreateIntakeService();
-        //    var model = svc.GetIntakeById(id);
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateMealIntakeService();
+            var model = svc.GetMealIntakeById(id);
 
-        //    return View(model);
-        //}
+            return View(model);
+        }
 
-        //[HttpPost]
-        //[ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeletePost(int id)
-        //{
-        //    var service = CreateIntakeService();
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateMealIntakeService();
 
-        //    service.DeleteIntake(id);
+            service.DeleteMealIntake(id);
 
-        //    TempData["SaveResult"] = "Your Meal was deleted.";
+            TempData["SaveResult"] = "Your Meal Intake was deleted.";
 
-        //    return RedirectToAction("Index");
-        //}
+            return RedirectToAction("Index");
+        }
 
         private MealIntakeService CreateMealIntakeService()
         {
