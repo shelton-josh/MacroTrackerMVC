@@ -2,13 +2,16 @@
     ViewBag.Title = "Home Page";
 }
 
+<link href="~/Content/Site.css" rel="stylesheet" />
+
 <div class="jumbotron">
-    <h1>Macro Tracker</h1>
-    <p class="lead">Macro Tracker allows you to add, edit, see details, delete foods, as well as create complete meal plans. Save foods and their macronutrient profiles and simply click foods to add them to a meal plan! </p>
-    <p><a href="/Home/About" class="btn btn-primary btn-lg">More Info &raquo;</a></p>
+        <h1>Macro Tracker</h1>
+        <p class="lead">Macro Tracker allows you to add, edit, see details, delete foods, as well as create complete meal plans. Save foods and their macronutrient profiles and simply click foods to add them to a meal plan! </p>
+        <p><a href="/Home/About" class="btn btn-primary btn-lg">More Info &raquo;</a></p>
 </div>
 
 <div class="row">
+    
     <div class="col-md-4">
         <h2>Create a Food</h2>
         <p>
@@ -18,7 +21,7 @@
     </div>
     <div class="col-md-4">
         <h2>Make a Meal</h2>
-        <p>Start tracking the foods you have created. This button will bring you to the page where you can simply press which foods you have consumed for the day! This simple process allows us to calculate everything for you.</p>
+        <p>Click this button and it will bring you to the page where you can view which foods you have created so far along with their total macro nutrient breakdown.</p>
         <p><a class="btn btn-default" href="/Intake/Create">Create Meal &raquo;</a></p>
     </div>
     <div class="col-md-4">
