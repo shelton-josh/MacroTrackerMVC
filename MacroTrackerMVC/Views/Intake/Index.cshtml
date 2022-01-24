@@ -10,9 +10,10 @@
 
 <div class="intakeindex">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+    <p>
+        <a class="btn btn-default" href="/Intake/Create">Create Intake &raquo;</a>
+    </p>
+
 <table class="table table-striped" id="mealTbl">
     <thead>
         <tr>
@@ -72,3 +73,14 @@
         })
     </script>
 }
+
+<style>
+    td input {
+        opacity: .8;
+    }
+
+    .btn {
+        background-image: url(../../Content/images/marbel.jpg);
+        color: black;
+    }
+</style>

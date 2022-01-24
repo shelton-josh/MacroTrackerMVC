@@ -187,6 +187,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\external-content.duckduckgo.com.jpg" />
+    <Content Include="Content\images\marbel.jpg" />
     <Content Include="Content\images\striped.JPG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

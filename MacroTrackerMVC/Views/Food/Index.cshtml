@@ -9,9 +9,10 @@
     <h2>Index</h2>
 <div class="foodindex">
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
+    <p
+       ><a class="btn btn-default" href="/Food/Create">Create Food &raquo;</a>
     </p>
+    
 
     @if (TempData.ContainsKey("SaveResult"))
     {
@@ -69,3 +70,14 @@
         })
     </script>
 }
+
+<style>
+    td input {
+        opacity: .8;
+    }
+
+    .btn {
+        background-image: url(../../Content/images/marbel.jpg);
+        color: black;
+    }
+</style>

@@ -75,9 +75,10 @@
  </div>
     }
 
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
+<div>
+    <p><a class="btn btn-default" href="/Food/Index">Back To Foods &raquo;</a></p>
+    <p><a class="btn btn-default" href="/Home">Back To Home &raquo;</a></p>
+</div>    
 
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
@@ -89,7 +90,7 @@
         }
 
         .btn {
-            background-color: mediumspringgreen;
+            background-image: url(../../Content/images/marbel.jpg);
             color: black;
         }
     </style>

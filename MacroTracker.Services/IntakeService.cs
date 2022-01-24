@@ -42,26 +42,8 @@ namespace MacroTracker.Services
 
             using (var ctx = new ApplicationDbContext())
             {
-                //int savedItems = 0;
                 ctx.Intakes.Add(entity);
                 return ctx.SaveChanges() == 1;
-                //if (ctx.SaveChanges() == 1)
-                /*{
-                    foreach (var item in model.Food)
-                    {
-                        if (item.Quantity != 0)
-                        {
-                            var lastIntake = ctx.Intakes.ToList();
-                            var foodRelation = new Food
-                            {
-                                FoodId = lastIntake.Last().IntakeId,
-                                FoodName = item.FoodName,
-                            };
-                    ++savedItems;
-                    ctx.Foods.Add(foodRelation);
-                        }
-                    }
-                }*/
             }
         }
 
