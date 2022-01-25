@@ -86,6 +86,8 @@ C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrack
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\MacroTracker.Models.dll.config
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\MacroTracker.Services.pdb
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\MacroTracker.Services.dll.config
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\EntityFramework.xml
+C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\EntityFramework.SqlServer.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\System.Web.Helpers.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\System.Web.Mvc.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\System.Web.Optimization.xml
@@ -95,8 +97,6 @@ C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrack
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\System.Web.WebPages.Razor.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\Newtonsoft.Json.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\Antlr3.Runtime.pdb
-C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\EntityFramework.xml
-C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\EntityFramework.SqlServer.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\jshel\Documents\ElevenFiftyProjects\RedBadge\MacroTrackerMVC\MacroTrackerMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml

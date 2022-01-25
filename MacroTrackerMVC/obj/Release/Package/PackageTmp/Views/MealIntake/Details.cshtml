@@ -5,7 +5,7 @@
 }
 
 <h2>Details</h2>
-
+<div class="mealintakedetails">
 <div>
     <h4>MealIntakeDetail</h4>
     <hr />
@@ -44,7 +44,15 @@
 
     </dl>
 </div>
+    </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+<style>
+    .mealintakedetails {
+        background-color: white;
+        border-radius: 15px 15px 15px 15px;
+    }
+</style>

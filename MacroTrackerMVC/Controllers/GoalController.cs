@@ -11,21 +11,21 @@ namespace MacroTrackerMVC.Controllers
     public class GoalController : Controller
     {
 
-        private GoalService CreateIntakeService()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new GoalService(userId);
-            return service;
-        }
+        //private GoalService CreateIntakeService()
+        //{
+        //    var userId = Guid.Parse(User.Identity.GetUserId());
+        //    var service = new GoalService(userId);
+        //    return service;
+        //}
 
-        // GET: Daily
-        public ActionResult Index()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
+        //// GET: Daily
+        //public ActionResult Index()
+        //{
+        //    var userId = Guid.Parse(User.Identity.GetUserId());
 
           
 
-           return View();
-        }
+        //   return View();
+        //}
     }
 }
