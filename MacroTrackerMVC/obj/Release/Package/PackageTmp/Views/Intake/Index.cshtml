@@ -1,0 +1,86 @@
+﻿@model IEnumerable<MacroTracker.Models.IntakeListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<h2>Index</h2>
+
+<div class="intakeindex">
+
+    <p>
+        <a class="btn btn-default" href="/Intake/Create">Create Intake &raquo;</a>
+    </p>
+
+<table class="table table-striped" id="mealTbl">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MealId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FoodId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FoodQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Food)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MealId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FoodId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FoodQty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Food)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IntakeId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IntakeId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IntakeId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    </div>
+
+@section Scripts{
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('#mealTbl').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+            });
+        })
+    </script>
+}
+
+<style>
+    td input {
+        opacity: .8;
+    }
+
+    .btn {
+        background-image: url(../../Content/images/marbel.jpg);
+        color: black;
+    }
+</style>

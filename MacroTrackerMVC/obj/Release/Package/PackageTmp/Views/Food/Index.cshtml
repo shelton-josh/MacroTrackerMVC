@@ -1,0 +1,88 @@
+﻿@model IEnumerable<MacroTracker.Models.FoodListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+    <h2>Index</h2>
+<div class="foodindex">
+
+    <p
+       ><a class="btn btn-default" href="/Food/Create">Create Food &raquo;</a>
+    </p>
+    
+
+    @if (TempData.ContainsKey("SaveResult"))
+    {
+        <div class="alert alert-success fade in" role="alert">
+
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            @TempData["SaveResult"]
+        </div>
+    }
+    <table class="table table-striped" id="mealTbl">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FoodId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FoodName)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FoodId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FoodName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.FoodId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.FoodId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.FoodId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+<br />
+    <p><a class="btn btn-default" href="/Home">Back To Home &raquo;</a></p>
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('#mealTbl').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+            });
+        })
+    </script>
+}
+
+<style>
+    td input {
+        opacity: .8;
+    }
+
+    .btn {
+        color: black;
+    }
+</style>
