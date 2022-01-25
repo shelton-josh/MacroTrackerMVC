@@ -6,7 +6,7 @@
 
 <div class="jumbotron">
         <h1>Macro Tracker</h1>
-        <p class="lead">Macro Tracker allows you to create Foods with your own macro nutrients! Add your created Foods in (Intake) and then see the magic in the (Meal) section! </p>
+        <p class="lead">Macro Tracker allows you to create Foods with your own macro nutrients! Add your created Foods/Meals in Create and then let the magic Intake work in the background to create your custom Foods/Meals/Meal Plans! </p>
         <p><a href="/Home/About" class="btn btn-primary btn-lg">More Info &raquo;</a></p>
 </div>
 
@@ -15,13 +15,13 @@
     <div class="col-md-4">
         <h2>STEP 1</h2>
         <p>
-            Click the button in this section to start creating food! You may set up your own macro-nutrients for the foods you create and name it for easy to re-use functionality.
+            Click the button in this section to start creating food! You may set up your own macro-nutrients for the foods you create.
         </p>
         <p><a class="btn btn-default" href="/Food/Create">Create Food &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>STEP 2</h2>
-        <p>Click this button and it will bring you to the page where you can create an empty Meal by naming the Meal and including which foods you would like to include.</p>
+        <p>Click this button and it will bring you to where you can create an empty Meal and including which foods you would like to include.</p>
         <p><a class="btn btn-default" href="/Meal/Create">Create Meal &raquo;</a></p>
     </div>
     <div class="col-md-4">
@@ -37,7 +37,20 @@
     }
 
     .btn {
-        background-image: url(../../Content/images/marbel.jpg);
-        color: black;
+        display: inline-block;
+        background-color: darkslategray;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: palegoldenrod;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        width: 250px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
     }
 </style>

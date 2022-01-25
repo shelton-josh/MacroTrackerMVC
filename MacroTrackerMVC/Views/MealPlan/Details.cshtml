@@ -4,9 +4,11 @@
     ViewBag.Title = "Details";
 }
 
+<link href="~/Content/Site.css" rel="stylesheet" />
+
 <h2>Details</h2>
 
-<div>
+<div class="mealplandetails">
     <h4>MealPlanDetail</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -40,3 +42,10 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.MealPlanId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+<style>
+    .mealplandetails {
+        background-color: white;
+        border-radius: 15px 15px 15px 15px;
+    }
+</style>
