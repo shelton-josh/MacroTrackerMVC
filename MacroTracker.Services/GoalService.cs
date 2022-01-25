@@ -8,5 +8,11 @@ namespace MacroTracker.Services
 {
     public class GoalService
     {
+        private readonly Guid _userId;
+
+        public GoalService(Guid userId)
+        {
+            _userId = userId;
+        }
     }
 }
